@@ -1,0 +1,309 @@
+@alpha: 0.5;
+.absolute_handler{
+  position:absolute;
+}
+
+.rounded(@size){
+border-radius:@size;
+-moz-border-radius:@size;
+-webkit-border-radius:@size;
+-o-border-radius:@size;
+}
+
+.shadow(@x,@y,@blur,@color){
+box-shadow: @x @y @blur @color;
+-moz-box-shadow: @x @y @blur @color;
+-webkit-box-shadow: @x @y @blur @color;
+-o-box-shadow: @x @y @blur @color;
+}
+
+.inset_shadow(@x,@y,@blur,@color){
+box-shadow:inset @x @y @blur @color;
+-moz-box-shadow:inset @x @y @blur @color;
+-webkit-box-shadow:inset @x @y @blur @color;
+-o-box-shadow:inset @x @y @blur @color;
+}
+
+.absolute_handler {
+  position: absolute;
+}
+.sizing {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+html,body {
+  height: 100%;
+  font-size: 65%;
+  background: #D8D8D8;
+  background: rgba(43,43,43,1);
+  min-width:900px;
+}
+
+body{
+ position:relative;
+}
+
+#ui_topbar {
+  font-size: 90%;
+  width: 100%;
+  height: 40px;
+  background: url("../images/top.jpg") repeat-x;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 300;
+}
+
+#ui_topbar h1,
+#ui_topbar ul {
+  position: absolute;
+
+}
+
+#ui_topbar h1,#ui_topbar h1 a {
+  font-size: 2em;
+  left: 10px;
+  top: 25%;
+  font-family:"Amaranth", helvetica,sans-serif,serif;
+  font-weight: bold;
+  color:#fff;
+  text-shadow: 1px 0px 0px rgba(0,0,0,0.3), 0px 1px 0px rgba(255,255,255,0.4);
+}
+
+#ui_footer {
+  width: 100%;
+  height: 35px;
+  background: #393939;
+  background: url("../images/bottom.jpg") repeat-x;
+  box-shadow: 1px 1px 3px rgba(0, -1, 0, 0.5);
+  -moz-box-shadow: 1px 1px 3px rgba(0, -1, 0, 0.5);
+  -webkit-box-shadow: 1px 1px 3px rgba(0, -1, 0, 0.5);
+  -o-box-shadow: 1px 1px 3px rgba(0, -1, 0, 0.5);
+  position: fixed;
+  bottom: 0px;
+  overflow:hidden;
+  z-index:3000;
+}
+
+#view_map {
+  display: block;
+  position: absolute;
+  right: 2px;
+  top:0px;
+  width:110px;
+  padding-top:4px;
+  padding-left:10px;
+  height: 100%;
+  background: url("../images/div.png") top left no-repeat;
+}
+
+#view_map li {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  cursor:pointer;	
+}
+
+#view_map li.two_col_view {
+  background: url("../images/2col.png") no-repeat;
+  width: 30px;
+  height: 22px;
+  border:2px solid rgba(0,0,0,0.1);
+}
+
+#view_map li.two_col_view:hover {
+  background: url("../images/2hover.png") no-repeat;
+  width: 30px;
+  height: 23px;
+  border:2px solid rgba(0,0,0,0.1);
+}
+
+#view_map li.cols_view {
+  background: url("../images/3column.png") no-repeat;
+  width: 30px;
+  height: 23px;
+  border:2px solid rgba(0,0,0,0.1);
+}
+
+#view_map li.cols_view:hover {
+  background: url("../images/3column-h.png") no-repeat;
+  width: 30px;
+  height: 23px;
+  border:2px solid rgba(0,0,0,0.1);
+}
+
+#view_map li.rows_view {
+  background: url("../images/2row.png") no-repeat;
+  width: 30px;
+  height: 23px;
+  border:2px solid rgba(0,0,0,0.1);
+
+}
+
+#view_map li.rows_view:hover {
+  background: url("../images/2row-h.png") no-repeat;
+  width: 30px;
+  height: 23px;
+  border:2px solid rgba(0,0,0,0.1);
+}
+
+#ui_menu{
+height:100%;
+overflow:hidden;
+}
+
+#ui_menu_settings{
+cursor:pointer;
+background: url("../images/div.png") top right no-repeat;
+font-size:3.0em;
+width:50px;
+height:100%;
+font-family:"Amaranth", helvetica,sans-serif,serif;
+}
+
+#ui_menu_settings img{
+width:34px;
+height:34px;
+margin-left:5px;
+margin-top:1px;
+opacity:0.4;
+}
+
+#ui_menu_settings img:hover{
+opacity:1;
+}
+
+#editor_groups{
+width:100%;
+height:100%;
+
+}
+#editor_groups #editor_view{
+width:auto;
+display:block;
+height:100%;
+}
+
+#editor_groups #editor_view div{
+ display:inline-block;
+ vertical-align:middle;
+ height:100%;
+ width:33.2234%;
+ background: rgba(210,210,210,1);
+ font-size:2em;
+ overflow:hidden;
+}
+
+#editor_groups #editor_view div textarea{
+border:0px solid #fff;
+background: rgba(210,210,210,1);
+display:block;
+width: 100%;
+height: 100%;
+}
+
+#editor_groups #editor_view div textarea:focus{
+  outline: 1px;
+  outline-offset: 0px;
+}
+
+#editor_groups #editor_view div iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0px solid #fff;
+  border-style: initial;
+}
+
+#ui_settings_panels{
+ position:fixed;
+ z-index:1000;
+ bottom:50px;
+ left:-265px;
+ width:250px;
+ height:auto;
+ background: rgba(50,50,50,1);
+ background: rgba(23,23,23,1);
+ background: rgba(16,16,16,1);
+ .rounded(5px);
+ color:#fff;
+ padding:7px;
+}
+
+#ui_settings_label{
+ display:block;
+ margin-top:5px;
+ margin-bottom:10px;
+ font-size:2.5em;
+ font-weight:bold;
+}
+
+#ui_settings_panels div.setting-container label{
+  display:block;
+  margin-bottom:5px;
+}
+
+#ui_settings_panels div.setting-container{
+ width:100%;
+ min-height:10%;
+ padding:5px;
+ margin-bottom:20px;
+ .sizing;
+}
+
+#ui_settings_panels div.setting-container label#views_settings_label{
+ font-size:2.0em;
+}
+
+#ui_settings_panels div.setting-container article#options{
+ font-size:1.754em;
+ margin-bottom:10px;
+ margin-left:15px;
+ height:30px;
+ position:relative;
+ background: rgba(0,0,0,0.1);
+ background: rgba(68,68,68,0.1);
+  .rounded(5px);
+}
+
+#ui_settings_panels div.setting-container article#options label{
+ display:block;
+ position:absolute;
+ top:7px;
+ left:4px;
+}
+
+#ui_settings_panels div.setting-container article#options div#control{
+ width:67px;
+ height:23px;
+ position:absolute;
+ right:3px;
+ top:5px;
+ overflow:hidden;
+ background: rgba(255,255,255,0.1);
+ background: url("../images/on-off-button.png") top right no-repeat;
+ background-position:100% 0%;
+}
+
+#ui_settings_panels div.setting-container article#options div#control a{
+ display:block;
+ width:100%;
+ height:100%;
+}
+
+#ui_settings_panels div.setting-container article#options div#control:hover{
+ width:67px;
+ height:23px;
+ position:absolute;
+ right:3px;
+ top:5px;
+ overflow:hidden;
+ background: rgba(255,255,255,0.1);
+ background: url("../images/on-off-button-hover.png") top right no-repeat;
+ background-position:100% 0%;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+   <link rel="stylesheet" href="./assets/css/reset.css" />
+   <link rel="stylesheet" href="./assets/css/editor.css" />
+   <script src="./assets/framework/jquery.js"></script>
+   <script src="./assets/js/editor.js"></script>
+  </head>
+  <body>
+   <header id="ui_topbar">
+     <h1><a>MonsterEditor</a></h1>
+   </header>
+
+   <section id="editor_groups">
+   	
+   	<section id="editor_view" data-type="default-group">
+   	   <div id="html-writer" >
+		<textarea></textarea>
+   	   </div>
+   	   <div id="js-writer" >
+		<textarea></textarea>
+   	   </div>
+   	   <div id="design-viewer" ></div>
+   	</section>	
+   	
+   </section>
+
+   <aside id="ui_settings_panels">
+     <label id="ui_settings_label">Settings</label>
+     
+    <div id="views_settings" class="setting-container">
+      <label id="views_settings_label">Views:</label>
+      
+       <article id="options"><label>HTML</label><div id="control">
+        <a></a>
+       </div></article>
+       <article id="options"><label>JAVASCRIPT</label><div id="control">
+        <a></a>
+       </div></article>
+       <article id="options"><label>DESIGN</label><div id="control">
+        <a></a>
+       </div></article>
+       
+    </div>
+    
+    <div id="group_feature_settings" class="setting-container">
+      <label id="views_settings_label">Groups:</label>
+       
+       <article id="options"><label>GROUP FEATURE:</label><div id="control">
+        <a></a>
+       </div></article>
+
+    </div>
+    
+    
+    <div id="storage_settings" class="setting-container">
+      <label id="views_settings_label">Storage:</label>
+      
+       <article id="options"><label>LOCAL STORAGE:</label><div id="control">
+        <a></a>
+       </div></article>
+       <article id="options"><label>FILE STORAGE:</label><div id="control">
+        <a></a>
+       </div></article>
+       <article id="options"><label>GIT STORAGE:</label><div id="control">
+        <a></a>
+       </div></article>
+       
+    </div>
+    
+   </aside>
+ 
+   <footer id="ui_footer">
+    <div id="ui_menu">
+      <h2 id="ui_menu_settings"><img src="./assets/images/disk.png" /></h2>
+    </div>
+    <ul id="view_map">
+     <li class="rows_view"><a href="#"></a></li>
+     <li class="two_col_view"><a href="#"></a></li>
+     <li class="cols_view"><a href="#"></a></li>
+    </ul>
+   </footer>
+  </body>
+</html>
