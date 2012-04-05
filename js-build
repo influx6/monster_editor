@@ -1,0 +1,25 @@
+var jsconcat = require('jsConcat').JsConcat;
+
+var config = {
+	build_dir :" ./builds",
+	
+	use:{
+	
+		monster_engine: {
+			name: 'monster_engine.js',
+	    		src_dir : './assets/js',
+	    		src:['editor.js']
+		}
+			
+	}
+}
+
+
+jsconcat.init(config);
+
+	/*curler:{
+			name: 'curler.js',
+			src_dir : './assets/js/curler',
+			src: ['curler.js']
+		}
+		*/
