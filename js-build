@@ -1,25 +1,32 @@
 var jsconcat = require('jsConcat').JsConcat;
 
-var config = {
-	build_dir :" ./builds",
+var monster_engine = {
+	build_dir:" ./builds",
+    uglify: true,
+	src_dir : './assets/js',
+	name: 'monster_editor.js',
+	src:['editor.js']
+};
+
+var stub = {
+	build_dir:"./builds",
+	uglify: true,
+	src_dir: '../jsStub',
+	name:"stub.js",
+	src:['stub.js']
+};
+
+var mq = {
+	build_dir:"./builds",
+	uglify: true,
+	src_dir: '../monster_query/lib',
+	name:"mq.js",
+	src:["mq.js","mq_elements.js","mq_query.js","mq_events.js","mq_namespace.js"]
+};
+
+jsconcat.compile(monster_engine);
+jsconcat.compile(stub);
+jsconcat.compile(mq);
+
 	
-	use:{
 	
-		monster_engine: {
-			name: 'monster_engine.js',
-	    		src_dir : './assets/js',
-	    		src:['editor.js']
-		}
-			
-	}
-}
-
-
-jsconcat.init(config);
-
-	/*curler:{
-			name: 'curler.js',
-			src_dir : './assets/js/curler',
-			src: ['curler.js']
-		}
-		*/

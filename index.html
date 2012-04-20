@@ -5,6 +5,8 @@
    <link rel="stylesheet" href="./assets/css/editor.css" />
    <script src="./assets/framework/jquery.js"></script>
    <script src="./assets/js/editor.js"></script>
+   <script src="./builds/stub.js"></script>
+   <script src="./builds/mq.js"></script>
   </head>
   <body>
    <header id="ui_topbar">
@@ -14,11 +16,25 @@
    <section id="editor_groups">
    	
    	<section id="editor_view" data-type="default-group">
-   	   <div id="html-writer" >
-		<textarea></textarea>
+   	   <div id="html-writer" class="text-writer">
+	        <ul class="text-ruler">
+		  <li>1</li>
+		  <li>2</li>
+		</ul>
+		<div class="text-view"  >
+			<textarea class="text-view-area"></textarea>
+			<iframe class="text-view-frame"></iframe>			
+		</div>
    	   </div>
-   	   <div id="js-writer" >
-		<textarea></textarea>
+   	   <div id="js-writer" class="text-writer">
+	       <ul class="text-ruler">
+		  <li>1</li>
+		  <li>2</li>
+		</ul>
+		<div class="text-view"  >
+			<textarea class="text-view-area"></textarea>
+			<iframe class="text-view-frame"></iframe>			
+		</div>
    	   </div>
    	   <div id="design-viewer" ></div>
    	</section>	
