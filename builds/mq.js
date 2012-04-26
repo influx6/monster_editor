@@ -106,7 +106,6 @@ MonsterQuery.core.Element = Stub.create("MonsterQuery.Element",{
 	get: function(selector,callback){
 		var m = this.current;
 		var g = this._search(m,selector);
-		console.log("search",g);
 		this.current = g;
 		
 		if(callback){ this.useResult(callback); }
@@ -211,7 +210,8 @@ _querinize_string: function(selector){
 	selector = this._query_sanitize(selector,/^[\s]+/ig,'');
 	selector = this._query_sanitize(selector,/>+|\++/ig,'');
 	selector = this._query_sanitize(selector,/\s+/ig,' ');
-
+	selector = this._query_sanitize(selector,/(\s+)$/ig,'');
+	
 	return selector;
 },
 
@@ -230,16 +230,18 @@ get : function(selector,callback){
 getSelector: function(selector){
 	if(typeof selector != "string"){ throw new Error("selector is not a string") }
 		
-	selector = this._querinize_string(selector).split(' ');
-	console.log(selector);
-	//var root = selector[0];
-	//var map = selector.splice(1,selector.length);
+	var s = this._querinize_string(selector).split(' ');
+	var root = s[0];
+	var map = s.splice(1,selector.length);
+		
+	var element = new this.module.Element(this.getElement(root));
 	
-	//console.log(map,selector)
-	//var element = new this.module.Element(this.getElement(root));
+	while(map.length > 0){
+		element.get(map[0]);
+		map = map.splice(1,map.length);
+	}
 	
-	
-	//return element.grab();
+	return element.grab();
 }
 
 });
