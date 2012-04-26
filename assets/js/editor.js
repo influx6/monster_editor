@@ -1,7 +1,9 @@
 
 $(function(){
 	
-	var html_editor = $('#editor_view #html-writer div.text-view iframe.text-view-frame');
+	var html_editor = $('#editor_view');
+	
+	//console.log(html_editor);
 	window.html_editor = html_editor;
 
 });

@@ -18,7 +18,7 @@ var stub = {
 
 var mq = {
 	build_dir:"./builds",
-	uglify: true,
+	uglify: false,
 	src_dir: '../monster_query/lib',
 	name:"mq.js",
 	src:["mq.js","mq_elements.js","mq_query.js","mq_events.js","mq_namespace.js"]
