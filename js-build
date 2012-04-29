@@ -21,7 +21,7 @@ var mq = {
 	uglify: false,
 	src_dir: '../monster_query/lib',
 	name:"mq.js",
-	src:["mq.js","mq_elements.js","mq_query.js","mq_events.js","mq_namespace.js"]
+	src:["mq.js","mq_elements.js","mq_query.js","mq_events.js","mq_ready.js"]
 };
 
 jsconcat.compile(monster_engine);

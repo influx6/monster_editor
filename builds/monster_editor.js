@@ -1,1 +1,1 @@
-$(function(){var a=$("#editor_view");window.html_editor=a})
+MQ.onReady(function(){var a=this.Query.getSelector("#editor_view").get("li")})

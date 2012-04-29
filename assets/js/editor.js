@@ -1,13 +1,5 @@
+MQ.onReady(function(){
 
-$(function(){
+	var html_editor = this.Query.getSelector("#editor_view").get("li");
 	
-	var html_editor = $('#editor_view');
-	
-	//console.log(html_editor);
-	window.html_editor = html_editor;
-
 });
-
-
-
-
